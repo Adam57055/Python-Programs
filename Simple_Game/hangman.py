@@ -65,10 +65,10 @@ stages = ['''
       |
 =========
 ''']
-end_of_game = False
+end_of_game = False #Program has not yet ended
 words = ["frog", "apple", "dictionary", "mango"]  #You can add many words as you want in the list. The more words you will enter the more interesting the game will be.
 
-choosen_word = random.choice(words)
+choosen_word = random.choice(words) #Word is randomly chosen
 #print("The choosen word is : ", choosen_word)
 
 lives = 6
@@ -81,7 +81,6 @@ while not end_of_game:
     guess = input("Guess a letter : ").lower()
     if guess in display:
         print(f"You have already guessed the letter {guess}")
-
     for position in range(len(choosen_word)):
         letter = choosen_word[position]
         if letter == guess:
