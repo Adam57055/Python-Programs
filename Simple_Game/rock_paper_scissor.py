@@ -8,7 +8,7 @@
            Paper beats rock 
            
        '''
-  
+#Player decides an option  
 import random
 t = int(input('What do you choose? Type 0 for Rock, 1 for Paper, 2 for Scissor. '))
 print("You have choosen👇")
@@ -45,9 +45,10 @@ elif t == 1:
     print("Paper",paper)
 elif t == 2:
     print("Scissor",scissor)
+#If user inputs an invalid option, they will be notifed
 else:
     print("Invalid option. Please select the option from the given line.")
-
+#Computer randomly decides an option
 computer = random.randint(0,2)
 print("Computer have choosen👇")
 if t < 3:
@@ -59,11 +60,13 @@ if t < 3:
         print("Scissor",scissor)
 else:
     print("Restart the Game.")
-
+#Tie outcome
 if t == 0 and computer == 0 or t == 1 and computer == 1 or t == 2 and computer == 2:
     print("Its a draw")
+#Loss outcome
 elif t == 0 and computer == 1 or t == 1 and computer == 2 or t == 2 and computer == 0:
     print("You loose the match")
+#Win outcome
 elif t == 0 and computer == 2 or t == 1 and computer == 0 or t == 2 and computer == 1:
     print("You won the match")
 
